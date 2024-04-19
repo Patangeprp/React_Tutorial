@@ -29,17 +29,17 @@ function Image_Carousel() {
     <div>
       <div className="container">
         <div >
-            {current!==0 && <img className='backImage'  src={images[current+1]}></img>}
+            <img className='backImage'  src={images[current-1]}></img>
         <a className="back" onClick={backImg}>
           <img style={{zIndex:10,opacity:0.6}}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQueqGqNMAparRWEHIYmH4UPIyrqh-MDuflqg&s" alt="back" />
         </a>
         </div>
         
         <div className="imgContainer">
-          <img src={images[current]} alt={`Image ${current}`} />
+          <img src={images[current+1]} alt={`Image ${current}`} />
         </div>
         <div >
-        {current!==images.length-1 && <img className='frontImage' src={images[current-1]}></img>}
+         <img className='frontImage' src={images[current]}></img>
         <a className="front" onClick={frontImg}>
           <img style={{zIndex:10,opacity:0.6}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-o92ll99sIj3bkYhbXqtL0axJ2lVuhNhevUPdzatNZXEjM_KvXZko-TMUImjHyZzjsXo&usqp=CAU" alt="front" />
         </a>
