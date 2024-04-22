@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.pizza{
+  font-family: Bereville;
+  font-size: 100px;
+  text-shadow: 2px 2px rgb(187, 165, 165);
+  color: rgba(207, 41, 41, 0.9);
+}
