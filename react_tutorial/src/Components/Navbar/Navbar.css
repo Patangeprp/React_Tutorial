@@ -1,0 +1,85 @@
+.logo{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+.navbar{
+    background-color: rgba(220, 212, 212, 0.673);
+    position: sticky; /* Make the navbar sticky */
+    top: 0; 
+    z-index: 2;
+}
+a{
+    color: black;
+    padding: 10px;
+    margin-left: 50px;
+    transition: border-bottom 2s ease; /* Add transition property */
+    width: 100px;
+}
+.navbar a:hover{
+    border-bottom: 1px solid white;
+    color: black;
+}
+.logo1{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    margin: 10px;
+}
+.navbar-toggler{
+    background-color: aqua;
+}
+.navbar-nav{
+    margin-left: 10vw;
+}
+.fa-magnifying-glass{
+    color: black;
+    font-size: large;
+}
+.btn:hover{
+    background-color: white;
+}
+.fa-magnifying-glass:hover{
+    color: black;
+}
+.btn{
+    height: 40px;
+    border: 1px solid black;
+}
+.form-control{
+    margin-left: 5vw;
+    width: 20vw;
+}
+/* .cart{
+    background-color: white;
+    border-radius: 5px;
+} */
+.fa-cart-shopping{
+    font-size: x-large;
+    margin-top: 8px;
+    cursor: pointer;
+    color: black;
+}
+.count{
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    top: -30px;
+    left: 80px;
+    border-radius: 100%;
+    z-index: 10;
+    display: none;
+}
+.searchBar{
+    display: flex;
+}
+input{
+    box-shadow: 3px 3px  rgb(180, 171, 171);
+}
+body{
+    font-family: sans-serif;
+    
+}
+
+  
+
+
