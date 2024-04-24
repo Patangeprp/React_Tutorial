@@ -42,12 +42,14 @@ function App({todos,addTodo,removeTodo,toggleTodo}) {
       <ul>
           {todos.map((todo)=>(
             <li
-            className='todo.completed ? yes :no'
+            className={todo.completed ? 'yes' :'no'}
             key={todo.id}
             >
               {todo.text}
-              <button onClick={()=>handleToggle(todo.id)}>Mark as done</button>
-              <button onClick={()=>handleRemove(todo.id)}>Remove</button>
+              <span className='todobtn'>
+              <button onClick={()=>handleToggle(todo.id)} className='mark' > Mark as done</button>
+              <button onClick={()=>handleRemove(todo.id)} className='mark'>Remove</button>
+              </span>
               </li>
 
           ))}

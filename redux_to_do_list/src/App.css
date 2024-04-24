@@ -1,23 +1,25 @@
 .todo{
   text-align: center;
+  color: white;
 }
 .input{
   height: 30px;
-  border: 2px solid;
+  border: none;
   box-shadow: 0px 0px 5px black;
+  border-radius:10px ;
 }
 .btn{
   height: 35px;
-  border: 2px solid;
+  border: none;
   background-color: aqua;
   font-weight: bold;
   cursor: pointer;
   border-left: none;
   box-shadow: 0px 0px 5px black;
+  border-radius: 10px;
+  margin-left: 10px;
 }
-.App{
-  text-align: center;
-}
+
 .list{
   list-style-type: none;
   display: flex;
@@ -29,4 +31,47 @@
   margin: 20px;
 margin-top: 5px;
 cursor: pointer;
+}
+li{
+  text-align: center;
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  left: 40%;
+  font-weight: bold;
+  position: relative;
+  margin-top: 20px;
+  color: white;
+
+}
+.App{
+  text-align: center;
+  overflow-x: hidden;
+  background-color: black;
+  width: 700px;
+  display: block;
+  margin: auto;
+  height: 500px;
+}
+.mark{
+  height: 25px;
+  border: none;
+  background-color:white;
+  font-weight: bold;
+  cursor: pointer;
+  border-left: none;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.todobtn{
+  position: absolute;
+  left: 7vw;
+}
+.yes{
+  color:aqua;
+}
+.no{
+  color: white;
 }
