@@ -1,0 +1,32 @@
+.todo{
+  text-align: center;
+}
+.input{
+  height: 30px;
+  border: 2px solid;
+  box-shadow: 0px 0px 5px black;
+}
+.btn{
+  height: 35px;
+  border: 2px solid;
+  background-color: aqua;
+  font-weight: bold;
+  cursor: pointer;
+  border-left: none;
+  box-shadow: 0px 0px 5px black;
+}
+.App{
+  text-align: center;
+}
+.list{
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  left: 40%;
+  font-weight: bold;
+}
+.list i{
+  margin: 20px;
+margin-top: 5px;
+cursor: pointer;
+}
