@@ -13,6 +13,7 @@ export default function Cards({ src, name, price, description, onAddToCart}) {
     }
     onAddToCart(item);
   }
+  
 
   return (
     <div className="blur">

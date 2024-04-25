@@ -1,14 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Cards from './components/Cards';
 import Data from './components/Data';
 import { connect } from 'react-redux';
 import './App.css'
 
-function App({ items, addItem }) {
+function App({ items, addItem ,removeItem}) {
+
+  const[count,setCount]=useState(0);
 
   const addItemToCart = (item) => {
     addItem(item);
+    setCount(count+1);
   };
+
+  const removeFromCart=(id)=>{
+    removeItem(id);
+    setCount(count-1);
+  }
 
   return (
     <div className="App">
@@ -16,8 +24,9 @@ function App({ items, addItem }) {
         <li>
           <h1 className='pizza'>The Pizza House</h1>
           <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-            Cart
+          <i class="fa-solid fa-cart-shopping"></i>
           </button>
+          <span className='count'>{count}</span>
           <div className="modal fade" id="staticBackdrop" tabIndex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog" role="document">
               <div className="modal-content">
@@ -33,7 +42,7 @@ function App({ items, addItem }) {
                       <li key={item.id}>
                         <div className='container'>
                           <div className="mobile-container">
-                            <div className="mobile-card">
+                            <div className="mobile-card card1">
                               <img src={item.src} alt={item.name} className="mobile-image" />
                               <div className="mobile-details">
                                 <h2 className="mobile-name">{item.name}</h2>
@@ -43,7 +52,9 @@ function App({ items, addItem }) {
                             </div>
                           </div>
                         </div>
+                        <button className='remove' onClick={removeFromCart} >Remove</button>
                       </li>
+                      
                     ))}
                   </ul>
                 </div>
@@ -80,6 +91,12 @@ const mapDispatchToProps = (dispatch) => ({
       type: "add_Item",
       payload: item
     }),
+    removeItem: (id) => 
+      dispatch({ 
+          type: "remove_Item", 
+          payload: id 
+      })
 });
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

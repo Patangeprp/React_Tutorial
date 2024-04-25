@@ -25,7 +25,7 @@
   .mobile-card {
     margin: 30px;
     /* background-color: rgba(204, 183, 183, 0.434); */
-    box-shadow: 3px 3px 2px rgb(150, 143, 143), -3px -3px 2px rgb(150, 143, 143);
+    /* box-shadow: 3px 3px 2px rgb(150, 143, 143), -3px -3px 2px rgb(150, 143, 143); */
     width: 25vw;
   }
   
@@ -40,7 +40,7 @@
     flex-direction: column; /* Align the details vertically */
     align-items: center; /* Center the details horizontally */
     background-color: white;
-    box-shadow: 3px 3px 2px rgb(150, 143, 143), -3px -3px 2px rgb(150, 143, 143);
+    box-shadow: 3px 3px 2px rgb(150, 143, 143);
 
   }
   
