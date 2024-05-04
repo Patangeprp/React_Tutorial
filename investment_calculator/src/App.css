@@ -31,19 +31,55 @@ table{
   margin-top: 50px;
   width: 80%;
   background-color: black;
-  color: white;
   margin-left: 10%;
 }
 table th{
   background-color: rgba(216, 213, 213, 0.125);width: 50px;
   height: 30px;
-  
+  color: rgb(0, 255, 4);
 }
-button{
+table td{
+  height: 30px;
+  background-color: rgba(216, 213, 213, 0.125);
+  color: white;
+}
+.main button{
   height: 30px;
   border-radius: 10px;
   border: none;
   margin: 30px;
   font-weight: bold;
   cursor: pointer;
+}
+.SImode .SI{
+  height: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.SImode .CI{
+  height: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(225, 217, 217);
+  color: black;
+}
+.CImode .SI{
+  height: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(225, 217, 217);
+  color: black;
+}
+.CImode .CI{
+  height: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }

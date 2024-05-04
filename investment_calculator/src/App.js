@@ -3,10 +3,12 @@ import './App.css';
 import React, { useRef, useState } from 'react';
 
 function App() {
+  const[mode, setMode]=useState("SImode")
   const [saving, setSaving] = useState(0);
   const [yearlySavings, setYearlySavings] = useState(0);
   const [interest, setInterest] = useState(0);
   const [duration, setDuration] = useState(0);
+  const[tableRows,setTableRows]=useState([]);
   const savingRef=useRef(null);
   const yearlySavingsRef = useRef(null);
   const interestRef = useRef(null);
@@ -29,8 +31,9 @@ function App() {
   }
   
 
-  function calculate() {
-    const tableRows = [];
+  function compound() {
+    // setMode("CImode");
+    const calculatedRows = [];
     let totalSavings = saving;
     let totalInterest = 0;
   
@@ -39,7 +42,7 @@ function App() {
       totalInterest += yearlyInterest;
       totalSavings += yearlySavings + yearlyInterest;
   
-      tableRows.push(
+      calculatedRows.push(
         <tr key={i}>
           <td>{i}</td>
           <td>{totalSavings.toFixed(2)}</td>
@@ -50,8 +53,33 @@ function App() {
       );
     }
   
-    return tableRows;
+    setTableRows(calculatedRows);
   }
+  function simple(){
+    // setMode("SImode");
+    const calculatedRows = [];
+    let totalSavings = saving;
+    let totalInterest = 0;
+  
+    for (let i = 1; i <= duration; i++) {
+      const yearlyInterest = (saving) * (interest / 100);
+      totalInterest += yearlyInterest;
+      totalSavings += yearlySavings + yearlyInterest;
+  
+      calculatedRows.push(
+        <tr key={i}>
+          <td>{i}</td>
+          <td>{totalSavings.toFixed(2)}</td>
+          <td>{yearlyInterest.toFixed(2)}</td>
+          <td>{totalInterest.toFixed(2)}</td>
+          <td>NA</td>
+        </tr>
+      );
+    }
+  
+    setTableRows(calculatedRows);
+  }
+  
   function resetValue(){
     setSaving(0);
     setYearlySavings(0);
@@ -95,8 +123,12 @@ function App() {
             </li>
           </div>
         </div>
-        <button onClick={calculate}>CALCULATE</button>
+        <button onClick={mode==="SImode" ? simple:compound}>CALCULATE</button>
         <button onClick={resetValue}>RESET</button>
+      </div>
+      <div className={`${mode}`} style={{marginTop:'20px'}}>
+      <button onClick={()=>setMode("SImode")} className='SI'>SIMPLE INTEREST</button>
+      <button onClick={()=>setMode("CImode")} className='CI'>COMPOUND INTEREST</button>
       </div>
       <table>
         <thead>
@@ -109,7 +141,7 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {calculate()}
+          {tableRows}
         </tbody>
       </table>
     </div>
