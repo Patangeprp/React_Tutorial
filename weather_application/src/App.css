@@ -1,0 +1,84 @@
+
+.App {
+  text-align: center;
+}
+.card{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 25vh;
+  background-image: url('./img/—Pngtree—sky\ cloudiness\ weather\ clouds\ background_481546.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
+  color: black;
+}
+#city{
+  height: 40px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: 200px;
+  margin-left: 3vw;
+  margin-top: 10px;
+}
+a{
+  margin: 10px;
+}
+span{
+  position: relative;
+  bottom: 30px;
+  font-size:large;
+}
+
+.container{
+  display: flex;
+}
+.time{
+  margin: 15px;
+
+}
+.desc{
+  position:fixed;
+  top: 30.5%;
+  right: 40%;
+  padding: 40px;
+}
+.temp{
+  position:relative;
+  top: 15%;
+  left: 30%;
+  font-size: 40px;
+  padding: 10px;
+}
+#cityName{
+  margin-top: -20px;
+}
+#cloud{
+  color: white;
+  font-size: 100px;
+  margin-left: 15px;
+}
+/* #sun{
+  font-size: 100px;
+  margin-left: 35px;
+} */
+i{
+  cursor: pointer;
+}
+.dark{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 25vh;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
+  background-image: url('./img/4156249.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
