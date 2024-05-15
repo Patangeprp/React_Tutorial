@@ -1,0 +1,26 @@
+.App {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(177, 173, 173, 0.51);
+}
+body,html{
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    width: 95%;
+  }
+}
+p{
+  color: red;
+}
