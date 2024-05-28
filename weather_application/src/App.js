@@ -6,8 +6,8 @@ import Time from './components/Time';
 
 function App() {
 
-  const[city,setCity]=useState("Mumbai");
-  const[message,setMessage]=useState("Mumbai");
+  const[city,setCity]=useState("Pune");
+  const[message,setMessage]=useState("Pune");
   const[data,setData]=useState("");
   const[bg,setBg]=useState("");
   const[image,setImage]=useState("");
