@@ -2,12 +2,12 @@
 .App {
   text-align: center;
 }
-.card{
+.clear{
   width: 18rem;
   display: block;
   margin: auto;
   margin-top: 25vh;
-  background-image: url('./img/—Pngtree—sky\ cloudiness\ weather\ clouds\ background_481546.jpg');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb3ekGyu_2Kf3ZRecPZDQYKHbttHjJhm5PKu4tuQ_HBAQkaMeGALJUHdPhuB14U8qtXUI&usqp=CAU');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,6 +15,7 @@
   border-radius: 10px;
   box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
   color: black;
+  position: relative;
 }
 #city{
   height: 40px;
@@ -69,7 +70,13 @@ span{
 i{
   cursor: pointer;
 }
-.dark{
+.desc h2{
+  width: 200px;
+  position: absolute;
+  right: -30px;
+  top: 70px;
+}
+.snow{
   width: 18rem;
   display: block;
   margin: auto;
@@ -77,8 +84,110 @@ i{
   height: 50vh;
   border-radius: 10px;
   box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
-  background-image: url('./img/4156249.jpg');
+  background-image: url('https://i.pinimg.com/736x/5f/f6/7a/5ff67a00eadad79c6f68ceeab4ccb4a5.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+.desc img{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top:30px;
+  right: 10px;
+}
+.clouds{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 25vh;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
+  background-image: url('https://media.istockphoto.com/id/1362707719/photo/the-morning-sky-where-the-sun-is-rising-from-the-horizon.jpg?s=612x612&w=0&k=20&c=6ujJ7YU1ka4-uLyrrLN25Qx9vn17ReshSkdAZvL6hAw=');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.rain{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 25vh;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
+  background-image: url("https://media.istockphoto.com/id/498063665/photo/rainy-landscape.jpg?s=612x612&w=0&k=20&c=2KhHJguvlQvd83c-CJeOiuEKI323gbtSIf1n2sNdXJc=");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.snow{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 25vh;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-q1mMLjgijhxITUKVdkkr5OEjs5U5JcOY9Q&s');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}.mist{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 25vh;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
+  background-image: url("https://media.istockphoto.com/id/1341515382/photo/fog-in-black-smoke-and-mist-on-wooden-table-halloween-backdrop.jpg?s=612x612&w=0&k=20&c=Th9gc38WoIy_M7sg6qlv1WDjOY3fRdM57sE24MqGljk=");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}.fog{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 25vh;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
+  background-image: url('https://media.istockphoto.com/id/1009702398/photo/misty-mountain-landscape.jpg?s=612x612&w=0&k=20&c=D8T3BYxqXP5jpkIrwkbuJpRCCcOcH-iHx35489qfMDE=');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}.haze{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 25vh;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
+  background-image: url('https://media.istockphoto.com/id/1009702398/photo/misty-mountain-landscape.jpg?s=612x612&w=0&k=20&c=D8T3BYxqXP5jpkIrwkbuJpRCCcOcH-iHx35489qfMDE=');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}.smoke{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 25vh;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px rgb(220, 215, 215);
+  background-image: url('https://media.istockphoto.com/id/1077114796/photo/hill-with-trees-about-to-burn-in-red-orange-wildfire.jpg?s=612x612&w=0&k=20&c=4kgsAgQebXf6VM8xrmgh2gW7nBE98sDgdk1UGrgtJT8=');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
