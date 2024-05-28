@@ -10,7 +10,7 @@ function App() {
   const[message,setMessage]=useState("Mumbai");
   const[data,setData]=useState("");
   const[bg,setBg]=useState("");
-  const[iframe,setiframe]=useState("");
+  const[image,setImage]=useState("");
 
   useEffect(()=>{
     const fetchAPI=async()=>{
@@ -20,11 +20,34 @@ function App() {
       console.log(resJson);
       setData(resJson);
 
-      if(resJson.main.temp<20){
-        setBg("dark");
+      if(resJson.weather[0].description=="clear" || resJson.weather[0].description === "clear sky"){
+        setBg("clear");
+        setImage("https://cdn-icons-png.flaticon.com/512/4814/4814268.png")
       }
-      else{
-        setBg("card")
+      else if(resJson.weather[0].description=="broken clouds" || resJson.weather[0].description === "clouds"){
+        setBg("clouds");
+        setImage("https://cdn-icons-png.flaticon.com/512/1163/1163763.png")
+      }else if(resJson.weather[0].description=="rain"){
+        setBg("rain");
+        setImage("https://cdn-icons-png.flaticon.com/128/1163/1163657.png")
+      }else if(resJson.weather[0].description=="light rain" || resJson.weather[0].description === "drizzle"){
+        setBg("rain");
+        setImage("https://cdn-icons-png.flaticon.com/128/1163/1163657.png")
+      }else if(resJson.weather[0].description=="snow"){
+        setBg("snow");
+        setImage("https://cdn-icons-png.flaticon.com/512/2315/2315309.png")
+      }else if(resJson.weather[0].description=="mist" || resJson.weather[0].description === "dust"){
+        setBg("smoke");
+        setImage("https://cdn-icons-png.flaticon.com/128/13447/13447144.png")
+      }else if(resJson.weather[0].description=="fog"){
+        setBg("fog");
+        setImage("https://cdn-icons-png.flaticon.com/128/495/495651.png")
+      }else if(resJson.weather[0].description=="haze"){
+        setBg("haze");
+        setImage("https://cdn-icons-png.flaticon.com/128/1779/1779807.png")
+      }else if(resJson.weather[0].description=="smoke"){
+        setBg("smoke");
+        setImage("https://cdn-icons-png.flaticon.com/128/13447/13447144.png")
       }
 
     }
@@ -43,6 +66,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Welcone To Weather App</h1>
       <div className={`${bg}`} id='Card'>
       {!data ?(
     <p>data not found</p>
@@ -55,8 +79,8 @@ function App() {
     {/* <h3 className='humidity'> humidity:{data.main.humidity} </h3> */}
     <h1 className='temp'>{data.main.temp}<span> o</span></h1>
     </div>
-    <div>
-    <i class="fa-solid fa-cloud" id='cloud'></i>
+    <div className='desc'>
+    <img src={image}/>
     <h2 className='desc'>{data.weather[0].description} </h2> 
   </div>
   </div>
